@@ -1,0 +1,88 @@
+BiblioTycoon
+
+
+Book arrangement/rearrangement problems
+
+Buying & stocking problems
+
+Buying & Selling problems
+  Choosing/Selecting
+
+Finances
+  Accounting
+  Insurance
+
+
+Subscription
+
+Competition
+
+HR & help
+
+Automization?
+
+Theft
+
+Inventory management --- using dashboard
+
+Central Dashboard to dispatch commands to staff & handle digital records.
+
+Upgrades to store
+  cctv
+  software
+
+Other areas in library: with stipulations on silence, book reading, where books can be taken to
+  members only,
+  shop
+  cafe
+
+Seasons & occasions
+
+Decorations & displays in store & out store
+
+Store marketing: Social media, billboards, ads etc.
+
+Positioning - physical & strategic
+
+guest lectures
+
+Selecting music
+
+Fictional books & real books
+  Cover generator
+
+Market Generator
+
+Customers:
+  regularity,
+  tastes,
+  purchase history
+
+Location of the library/bookstore.
+
+------------BROADLY------------------------------------
+BiblioTycoon is a complete simulator for pure library &
+bookstore systems as well as a hybrid between the two.
+Some things possible in the game:
+  -Build a Trilogy like bookstore to profitability
+  -Build a functioning academic library with a predefined budget
+
+But ultimately the game has to be the ultimate comfort and fun thing for the player to play through
+with time becoming a non-factor when in it.
+  which means :
+    the game rewards more dedicated players with more complex tasks & finer control
+    while at the same time also being fun for casual play
+------------------------------------------------------
+
+Initial:
+Shelf arrangement & space management
+Book selection/stocking & arrangement/shelfing
+Customer AI
+
+
+----------------------
+Roadmap:
+BOOKSTORE CHAPTER: 
+1. Sourcing/Stocking module
+2. Shelf arrangement, display, categorization, & space management
+3. People module - Employees & Customers
