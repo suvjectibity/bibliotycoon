@@ -1,24 +1,28 @@
-var authors = [];
-var publishers = [];
-var books = [];
+world = {
+  publishersMap:  {},
+  personsMap : {},
+  storesMap : {}, //includes the player store & competitors
+  playerStore : new Store(),
+  initWorld: function() {
+    initPublishers();
+    initPersons();
+  },
+  runWorld: function() {
 
-function generateAuthor() {
-    return Math.random().toString(36).substring(7);
-}
+  },
+  initPublishers: function() {
 
-function generateBookTitle() {
-  return Math.random().toString(36).substring(7);
-}
+  },
+  initPersons: function() {
 
-function generatePublisher() {
-  return new Publisher(Math.random().toString(36).substring(7));
+  }
 }
 
 class Person {
   constructor(name,age,gender) {
     this.name = name;
     this.age = age;
-    this.books = [];
+    this.gender = gender;
   }
 }
 
@@ -56,14 +60,25 @@ class Book {
   }
 }
 
-class Employee extends Person {
-  constructor(person) {
-
+class Distributor {
+  constructor() {
   }
 }
 
-class Customer extends Person {
-  constructor() {
+class Employee {
+  constructor(person) {
+    this.person = person;
+    this.employeeId = Math.random(14);
+  }
+}
+
+class Customer {
+  constructor(person) {
+    this.person = person;
+  }
+
+  //change name to update?
+  behave() {
 
   }
 }
@@ -83,13 +98,73 @@ class Shelf {
 class Store {
   constructor() {
     this.name = "Three Shards of Shunt";
-    this.thefuckingowner = "Rock Cocker";
+    this.thefuckingowner = "Ymatr Supertramp";
     this.employees = {}; //map
     this.bookcases = {}; //map
     this.books = {}; //map
   }
 
   addEmployee(person) {
-
+    emp = new Employee(person);
+    this.employees[emp.id] = emp;
   }
+}
+
+function generateAuthor() {
+    return Math.random().toString(36).substring(7);
+}
+
+function generateBookTitle() {
+  return Math.random().toString(36).substring(7);
+}
+
+function generatePublisher() {
+  return new Publisher(Math.random().toString(36).substring(7));
+}
+
+function generateBookstore() {
+
+}
+
+function spawnNewCustomer() {
+  return null;
+}
+
+//probably inside the class?
+function retirePerson() {
+
+}
+
+//probably inside the class?
+function retireCustomer() {
+  retirePerson();
+}
+
+//rename toupdateCustomers?
+function behaveCustomers() {
+  spawnNewCustomer(); //if required
+  retireCustomer(); //if required
+}
+
+//rename to updateEmployees?
+function behaveEmployees() {
+
+}
+
+//rename to updatePublishers?
+function behavePublishers() {
+
+}
+
+function glInit() {
+  initPersons();
+  initPublishers();
+  (function gl(timeout) {
+    setTimeout(() => {
+      behaveCustomers();
+      behaveEmployees();
+      behavePublishers();
+      gl(timeout);
+    },timeout());
+  })(() => 100); //yeah, should this be random really?
 }
